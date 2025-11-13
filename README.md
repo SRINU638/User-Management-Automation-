@@ -1,10 +1,10 @@
-Here’s a clean, professional **README.md** you can include with your **User Management Automation (SysOps Challenge)** project 👇
+Here’s a clean, professional **README.md** you can include with your **User Management Automation (SysOps Challenge)** project 
 
 ---
 
 # User Management Automation — SysOps Challenge
 
-## 📘 Overview
+## Overview
 
 This project automates the creation and management of Linux user accounts from a formatted text file.
 It is designed for SysOps or DevOps engineers who need to quickly onboard multiple developers while ensuring consistent user setup, permissions, and logging.
@@ -13,20 +13,18 @@ The automation script — `create_users.sh` — reads a list of users and their 
 
 ---
 
-## ⚙️ Features
-
-✅ Reads input file (`users.txt`) containing usernames and group memberships
-✅ Ignores comments (`#`) and blank lines
-✅ Creates users, groups, and home directories if missing
-✅ Generates secure 12-character random passwords
-✅ Saves credentials to a password file (with `600` permissions)
-✅ Logs all actions, warnings, and errors
-✅ Handles existing users and groups gracefully
-✅ Works in both Linux and WSL environments
+## Features
+ Reads input file (`users.txt`) containing usernames and group memberships
+ Ignores comments (`#`) and blank line Creates users, groups, and home directories if missing
+ Generates secure 12-character random passwords
+ Saves credentials to a password file (with `600` permissions)
+ Logs all actions, warnings, and errors
+ Handles existing users and groups gracefully
+ Works in both Linux and WSL environments
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── create_users.sh           # Main automation script
@@ -39,7 +37,7 @@ The automation script — `create_users.sh` — reads a list of users and their 
 
 ---
 
-## 📄 Input File Format
+##  Input File Format
 
 Each line should follow:
 
@@ -62,27 +60,26 @@ manoj; dev,www-data
 
 ---
 
-## 🚀 Usage Instructions
+## Usage Instructions
 
-### 1️⃣ Make the script executable:
 
 ```bash
 chmod +x create_users.sh
 ```
 
-### 2️⃣ Run the script as root:
+###  Run the script as root:
 
 ```bash
 sudo ./create_users.sh Users.txt
 ```
 
-> 💡 If you’re on Windows Subsystem for Linux (WSL), use the full path to the input file:
+>  If you’re on Windows Subsystem for Linux (WSL), use the full path to the input file:
 >
 > ```bash
 > sudo ./create_users.sh /mnt/c/Users/User/Documents/Users.txt
 > ```
 
-### 3️⃣ Verify the results:
+### Verify the results:
 
 ```bash
 cat /mnt/c/Users/User/Desktop/UMA/user_passwords.txt
@@ -91,7 +88,7 @@ cat /mnt/c/Users/User/Desktop/UMA/user_management.log
 
 ---
 
-## 🧩 Example Output
+##  Example Output
 
 **Terminal Log:**
 
@@ -114,7 +111,7 @@ manoj:Z8s@K3yBp2vQ
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 * Passwords and logs are stored with `chmod 600` permissions (owner-only access).
 * Use a secure directory such as `/var/secure` for production deployments.
@@ -123,7 +120,7 @@ manoj:Z8s@K3yBp2vQ
 
 ---
 
-## 🧠 Design Explanation (Step-by-Step)
+##  Design Explanation (Step-by-Step)
 
 1. **Configuration Section**
    Defines paths for logs, passwords, and base directories.
@@ -147,17 +144,17 @@ manoj:Z8s@K3yBp2vQ
 
 ---
 
-## 🧪 Testing Checklist
+## Testing Checklist
 
-✅ Run the script with valid and invalid inputs
-✅ Check for skipped users (invalid format or empty lines)
-✅ Verify permissions on `/home/username`
-✅ Confirm password and log file creation
-✅ Re-run to ensure idempotence (existing users handled gracefully)
+ Run the script with valid and invalid inputs
+ Check for skipped users (invalid format or empty lines)
+ Verify permissions on `/home/username`
+ Confirm password and log file creation
+ Re-run to ensure idempotence (existing users handled gracefully)
 
 ---
 
-## 🧰 Dependencies
+## Dependencies
 
 * `bash`
 * `tr`
@@ -167,7 +164,7 @@ manoj:Z8s@K3yBp2vQ
 
 ---
 
-## 🏁 Example Demo Commands
+##  Example Demo Commands
 
 ```bash
 sudo ./create_users.sh Users.txt
