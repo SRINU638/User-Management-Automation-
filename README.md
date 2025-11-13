@@ -2,7 +2,7 @@ Here’s a clean, professional **README.md** you can include with your **User Ma
 
 ---
 
-# 🧑‍💻 User Management Automation — SysOps Challenge
+# User Management Automation — SysOps Challenge
 
 ## 📘 Overview
 
