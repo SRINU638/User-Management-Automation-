@@ -1,0 +1,4 @@
+light; sudo,dev,www-data
+siva bhai; sudo
+manoj; dev,www-data
+pavan; devv  ; admin
